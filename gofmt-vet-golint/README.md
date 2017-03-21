@@ -10,4 +10,4 @@ on POSIX or
 ```
 gradlew build 
 ```
-on Windows and see what happened!
+on Windows, then see what happened!
