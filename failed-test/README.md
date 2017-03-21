@@ -10,4 +10,6 @@ on POSIX or
 ```
 gradlew test
 ```
-on Windows and open `./.gogradle/reports/test/index.html` to see what happened!
+on Windows,
+
+then open `./.gogradle/reports/test/index.html` to see what happened!
