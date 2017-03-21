@@ -10,4 +10,4 @@ on POSIX or
 ```
 gradlew build 
 ```
-on Windows and open `StringReverse` in the project root to see what happened!
+on Windows and open `StringReverse`/`.gogradle/reports/test/index.html`/`.gogradle/reports/coverage/index.html` in the project root to see what happened!

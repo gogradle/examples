@@ -1,9 +1,6 @@
-buildscript {
-    dependencies {
-     classpath files('/Users/zhb/Projects/gogradle/build/libs/gogradle-0.3.3-all.jar')
-    }
+plugins {
+    id 'com.github.blindpirate.gogradle' version '0.3.4'
 }
-apply plugin: 'com.github.blindpirate.gogradle'
 
 golang {
     packagePath = 'github.com/my/package' // go import path of project to be built, NOT local file system path!
