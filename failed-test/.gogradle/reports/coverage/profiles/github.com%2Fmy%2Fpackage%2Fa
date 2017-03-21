@@ -1,0 +1,8 @@
+mode: set
+github.com/my/package/a/a1.go:3.21,4.20 1 1
+github.com/my/package/a/a1.go:4.20,6.6 1 0
+github.com/my/package/a/a1.go:6.6,8.6 1 1
+github.com/my/package/a/a2.go:3.21,4.13 1 1
+github.com/my/package/a/a2.go:4.13,6.6 1 0
+github.com/my/package/a/a2.go:6.6,8.6 1 1
+github.com/my/package/a/a2.go:11.30,12.2 0 0
