@@ -26,7 +26,10 @@ vet {
 task golint(type: Go){
     continueWhenFail = true
     doLast {
-        run 'golint github.com/my/package'
+        run('golint github.com/my/package', { stdout, stderr ->
+             new File('./stdout.txt').write(stdout)
+             new File('./stderr.txt').write(stderr)
+        })
     }
 }
 

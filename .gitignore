@@ -1,2 +1,6 @@
 .gradle/
 .gogradle/
+StringReverse_darwin_amd64
+StringReverse_linux_386
+StringReverse_windows_amd64.exe
+
