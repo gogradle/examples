@@ -1,0 +1,24 @@
+plugins {
+    id 'com.github.blindpirate.gogradle' version '0.4.0'
+}
+
+golang {
+    packagePath = 'github.com/my/package' // go import path of project to be built, NOT local file system path!
+}
+
+repositories {
+    golang {
+        root ~/github\.com\/[\w-]+\/[\w-]+/
+        dir '.private/repo'
+    } 
+}
+
+dependencies {
+    build('github.com/unexistent/repository'){
+        exclude name:'unexistent'
+    }
+}
+
+build {
+    outputLocation = './output'
+}
