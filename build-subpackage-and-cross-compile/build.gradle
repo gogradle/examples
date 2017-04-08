@@ -1,13 +1,13 @@
 plugins {
-    id 'com.github.blindpirate.gogradle' version '0.4.1'
+    id 'com.github.blindpirate.gogradle' version '0.4.2'
 }
 golang {
     packagePath = 'github.com/my/package' // go import path of project to be built, NOT local file system path!
 }
 
-build.dependsOn check
+goBuild.dependsOn goCheck
 
-build {
+goBuild {
     targetPlatform = 'linux-386, windows-amd64, darwin-amd64'
     
     doLast {

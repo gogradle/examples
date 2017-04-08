@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.blindpirate.gogradle' version '0.4.1'
+    id 'com.github.blindpirate.gogradle' version '0.4.2'
 }
 
 golang {
@@ -7,11 +7,13 @@ golang {
 }
 
 dependencies {
-    build 'github.com/golang/example#0dea2d0bf90754ffa40e0cb2f23b638f3e3d7e09'
+    golang {
+        build 'github.com/golang/example#0dea2d0bf90754ffa40e0cb2f23b638f3e3d7e09'
+    }
 }
 
-build.dependsOn check
+goBuild.dependsOn goCheck
 
-build {
+goBuild {
     outputLocation = './StringReverse${GOEXE}'
 }

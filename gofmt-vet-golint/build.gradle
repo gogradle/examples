@@ -1,21 +1,21 @@
 import com.github.blindpirate.gogradle.Go
 
 plugins {
-    id 'com.github.blindpirate.gogradle' version '0.4.1'
+    id 'com.github.blindpirate.gogradle' version '0.4.2'
 }
 golang {
     packagePath = 'github.com/my/package' // go import path of project to be built, NOT local file system path!
 }
 
-build.dependsOn check
+goBuild.dependsOn goCheck
 
-fmt {
+gofmt {
     doLast {
         gofmt '-e .'
     }
 }
 
-vet {
+goVet {
     continueWhenFail = true
     doLast {
         go 'tool vet -v .'
@@ -33,4 +33,4 @@ task golint(type: Go){
     }
 }
 
-check.dependsOn golint
+goCheck.dependsOn golint
