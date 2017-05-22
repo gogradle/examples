@@ -1,7 +1,7 @@
 import com.github.blindpirate.gogradle.Go
 
 plugins {
-    id 'com.github.blindpirate.gogradle' version '0.4.10'
+    id 'com.github.blindpirate.gogradle' version '0.5.2'
 }
 golang {
     packagePath = 'github.com/my/package' // go import path of project to be built, NOT local file system path!
@@ -26,10 +26,7 @@ goVet {
 task golint(type: Go){
     continueWhenFail = true
     doLast {
-        run('golint github.com/my/package', { stdout, stderr ->
-             new File('./stdout.txt').write(stdout)
-             new File('./stderr.txt').write(stderr)
-        })
+        run('golint github.com/my/package', writeTo('stdout.txt'), appendTo('stderr.txt'))
     }
 }
 
