@@ -1,0 +1,41 @@
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.com.github.blindpirate:gogradle:0.6.0"
+  }
+}
+
+plugins {
+    id 'java'
+}
+
+allprojects {
+    if(it.name.startsWith('go')) {
+         it.apply plugin: 'com.github.blindpirate.gogradle'
+         it.dependencies {
+             golang {
+                 build name:'my/common', dir: project(':go-common').projectDir
+             }
+         }
+    }
+}
+
+task copyGoExecutable(type: Copy) {
+    from ('go1/.gogradle'){
+        include '*go1'
+    }
+    from ('go2/.gogradle'){
+        include '*go2'
+    }
+    
+    into 'build/libs'
+}
+
+build.dependsOn copyGoExecutable
+
+copyGoExecutable.dependsOn ':go1:build'
+copyGoExecutable.dependsOn ':go2:build'

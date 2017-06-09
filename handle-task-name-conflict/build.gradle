@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+    id 'com.github.blindpirate.gogradle' version '0.5.4'
+}
+
+golang {
+    packagePath = 'github.com/my/package' // go import path of project to be built, NOT local file system path!
+}
+
+
