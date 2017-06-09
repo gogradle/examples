@@ -3,12 +3,12 @@ This is a sample project to demostrate how [Gogradle](https://github.com/blindpi
 No need to install `Go` or set `GOPATH` at all. Just install [JRE 8+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and run 
 
 ```
-./gradlew goTest
+./gradlew test 
 ```
 on POSIX or
 
 ```
-gradlew goTest
+gradlew test 
 ```
 on Windows,
 
