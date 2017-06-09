@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.blindpirate.gogradle' version '0.5.3'
+    id 'com.github.blindpirate.gogradle' version '0.5.4'
 }
 
 golang {
@@ -21,6 +21,6 @@ dependencies {
     }
 }
 
-goBuild {
+build {
     outputLocation = './output'
 }
