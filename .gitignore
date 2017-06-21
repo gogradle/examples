@@ -1,7 +1,11 @@
 .gradle/
 .gogradle/
+build/
 vendor/
 StringReverse_darwin_amd64
 StringReverse_linux_386
 StringReverse_windows_amd64.exe
+*.iml
+*.ipr
+*.iws
 
