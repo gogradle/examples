@@ -8,4 +8,6 @@ StringReverse_windows_amd64.exe
 *.iml
 *.ipr
 *.iws
+repository-management/output
+typical-build/StringReverse
 
