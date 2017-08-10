@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.blindpirate.gogradle' version '0.6.5'
+    id 'com.github.blindpirate.gogradle' version '0.7.0'
 }
 
 golang {
@@ -16,4 +16,13 @@ build.dependsOn check
 
 build {
     outputLocation = './StringReverse${GOEXE}'
+}
+
+task v(type: com.github.blindpirate.gogradle.Go){
+    go 'version'
+}
+
+task ls(type: com.github.blindpirate.gogradle.Go){
+    dependsOn v 
+    run 'ls'
 }

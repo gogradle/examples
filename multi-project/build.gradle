@@ -5,7 +5,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.com.github.blindpirate:gogradle:0.6.5"
+    classpath "gradle.plugin.com.github.blindpirate:gogradle:0.7.0"
   }
 }
 
