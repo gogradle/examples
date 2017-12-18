@@ -1,1 +1,0 @@
-/Users/zhb/Projects/examples/gofmt-vet-golint/.gogradle/project_gopath/src/github.com/my/package/broken_main.go:3:8: should not use dot imports
