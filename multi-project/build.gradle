@@ -24,12 +24,23 @@ allprojects {
     }
 }
 
+project(":go1"){
+    build {
+        outputLocation = './.gogradle/go1${GOEXE}'
+    }
+}
+project(":go2"){
+    build {
+        outputLocation = './.gogradle/go2${GOEXE}'
+    }
+}
+
 task copyGoExecutable(type: Copy) {
     from ('go1/.gogradle'){
-        include '*go1'
+        include '*go1*'
     }
     from ('go2/.gogradle'){
-        include '*go2'
+        include '*go2*'
     }
     
     into 'build/libs'
