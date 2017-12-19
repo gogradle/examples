@@ -22,5 +22,5 @@ dependencies {
 }
 
 build {
-    outputLocation = './output'
+    outputLocation = './output${GOEXE}'
 }
