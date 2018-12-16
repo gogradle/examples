@@ -5,7 +5,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.com.github.blindpirate:gogradle:0.8.0"
+    classpath "gradle.plugin.com.github.blindpirate:gogradle:0.11.0"
   }
 }
 
@@ -25,12 +25,12 @@ allprojects {
 }
 
 project(":go1"){
-    build {
+    goBuild {
         outputLocation = './.gogradle/go1${GOEXE}'
     }
 }
 project(":go2"){
-    build {
+    goBuild {
         outputLocation = './.gogradle/go2${GOEXE}'
     }
 }
@@ -48,5 +48,5 @@ task copyGoExecutable(type: Copy) {
 
 build.dependsOn copyGoExecutable
 
-copyGoExecutable.dependsOn ':go1:build'
-copyGoExecutable.dependsOn ':go2:build'
+copyGoExecutable.dependsOn ':go1:goBuild'
+copyGoExecutable.dependsOn ':go2:goBuild'
