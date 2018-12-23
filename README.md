@@ -17,5 +17,3 @@ Clone this project, and do as the documentation says.
   - A sample project with external tools (golint)
 - [Use private repository or mirror repository](https://github.com/gogradle/samples/tree/master/repository-management)
   - A sample project with mirror repository and package exclusion 
-- [Handle task name conflict](https://github.com/gogradle/samples/tree/master/handle-task-name-conflict)
-  - A sample project with resolution of conflict task name 
