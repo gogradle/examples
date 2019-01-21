@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.blindpirate.gogradle' version '0.11.0'
+    id 'com.github.blindpirate.gogradle' version '0.11'
 }
 
 golang {
@@ -13,14 +13,17 @@ gofmt {
 }
 
 goVet {
-    continueWhenFail = true
+    continueOnFailure = true
     go 'tool vet -v .'
 }
 
 // You should make sure golint is in your $PATH
 task golint(type: com.github.blindpirate.gogradle.Go){
-    continueWhenFail = true
-    run('golint github.com/my/package', writeTo('stdout.txt'), appendTo('stderr.txt'))
+    continueOnFailure = true
+    run('golint github.com/my/package') {
+        stdout writeTo('stdout.txt') 
+        stderr appendTo('stderr.txt')
+    }
 }
 
 goCheck.dependsOn golint
